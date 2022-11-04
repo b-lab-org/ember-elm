@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import hbs from "htmlbars-inline-precompile";
+import { hbs } from "ember-cli-htmlbars";
 
 export default Component.extend({
   classNames: "emoji-picker",

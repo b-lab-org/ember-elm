@@ -1,9 +1,9 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from "ember-qunit";
-import { render } from '@ember/test-helpers';
-import hbs from "htmlbars-inline-precompile";
-import Elm from "dummy/elm-modules";
 import { run } from "@ember/runloop";
+import { render } from '@ember/test-helpers';
+import Elm from "dummy/elm-modules";
+import { hbs } from "ember-cli-htmlbars";
+import { setupRenderingTest } from "ember-qunit";
+import { module, test } from 'qunit';
 
 module("Integration | Component | elm component", function(hooks) {
   setupRenderingTest(hooks);
