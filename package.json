@@ -32,10 +32,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/eslint-plugin": "^7.19.1",
+    "@babel/plugin-proposal-decorators": "^7.20.2",
     "@ember/optional-features": "^2.0.0",
     "@glimmer/component": "^1.0.0",
     "@glimmer/tracking": "^1.0.0",
-    "babel-eslint": "^9.0.0",
     "broccoli-asset-rev": "^3.0.0",
     "elm": "^0.19.1-5",
     "ember-ajax": "^5.1.2",

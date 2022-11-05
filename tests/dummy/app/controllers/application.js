@@ -1,26 +1,31 @@
 import Controller from '@ember/controller';
-import { set } from '@ember/object';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 import Elm from "dummy/elm-modules";
 
 export default class ApplicationController extends Controller {
-    // eslint-disable-next-line
-    sendToElm(message) {};
-    value = "👋";
+    @tracked
+    sendToElm() {}
+
+    @tracked
+    value = '👋';
+
     Elm = Elm;
     flags = '{}';
 
-    actions = {
-        sendToElm() {
-            this.sendToElm(this.value);
-            set(this, "value", "");
-        },
+    @action
+    setupPorts(ports) {
+        this.sendToElm = ports.emberMessage.send;
+    }
 
-        setupPorts(ports) {
-            set(this, "sendToElm", ports.emberMessage.send);
-        },
+    @action
+    postElmMessage() {
+        this.sendToElm(this.value);
+        this.value = '';
+    }
 
-        onChange(event) {
-            set(this, "value", event.target.value);
-        }
+    @action
+    onChange(event) {
+        this.value = event.target.value;
     }
 }
