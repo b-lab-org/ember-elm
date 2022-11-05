@@ -17,6 +17,12 @@ module.exports = function(environment) {
       }
     },
 
+    babel: {
+      plugins: [
+        ['@babel/plugin-proposal-private-property-in-object', { loose: false }],
+      ],
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
