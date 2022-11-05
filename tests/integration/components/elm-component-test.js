@@ -1,4 +1,4 @@
-import { run } from "@ember/runloop";
+import { next } from "@ember/runloop";
 import { render } from '@ember/test-helpers';
 import Elm from "dummy/elm-modules";
 import { hbs } from "ember-cli-htmlbars";
@@ -13,7 +13,7 @@ module("Integration | Component | elm component", function(hooks) {
     this.set("Elm", Elm);
     await render(hbs`<div>{{elm-component src=this.Elm.Main.Hello}}</div>`);
 
-    run.next(() => {
+    next(() => {
       assert.dom(this.element).hasText("hello world");
       done();
     });
