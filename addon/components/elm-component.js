@@ -14,7 +14,9 @@ export default class ElmComponent extends Component {
   didReceiveAttrs() {
     this._super(...arguments);
 
-    if (!this.src) throw new Error("elm-component missing src object");
+    if (!this.src) {
+      throw new Error("elm-component missing src object");
+    }
   }
 
   didInsertElement() {
