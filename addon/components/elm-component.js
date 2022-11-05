@@ -1,30 +1,31 @@
-import Component from '@ember/component';
-import classic from 'ember-classic-decorator';
+import { action } from '@ember/object';
+import Component from '@glimmer/component';
 
-@classic
 export default class ElmComponent extends Component {
-  // Elm module
   src = undefined;
 
   // anything you want to pass to the Elm module
   flags = undefined;
 
   // function that is passed the Elm module's ports
-  setup() {}
+  setup = () => {}
 
-  didReceiveAttrs() {
-    super.didReceiveAttrs(...arguments);
+  constructor(owner, args) {
+    super(owner, args);
 
+    this.src = args.src;
+    this.flags = args.flags;
+    this.setup = args.setup;
+  }
+
+  @action
+  insertedElement(element) {    
     if (!this.src) {
       throw new Error('elm-component missing src object');
     }
-  }
-
-  didInsertElement() {
-    super.didInsertElement(...arguments);
 
     const { ports } = this.src.init({
-      node: this.element,
+      node: element,
       flags: this.flags
     });
 
