@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
-    "@ember/jquery": "^0.6.0",
+    "@ember/jquery": "^2.0.0",
     "@ember/optional-features": "^0.7.0",
     "broccoli-asset-rev": "^3.0.0",
     "elm": "^0.19.1-5",
