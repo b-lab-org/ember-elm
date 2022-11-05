@@ -1,22 +1,19 @@
 import Component from '@ember/component';
-import { hbs } from "ember-cli-htmlbars";
 
-export default Component.extend({
-  layout: hbs`{{yield}}`,
-
+export default class ElmComponent extends Component {
   // Elm module
-  src: undefined,
+  src = undefined;
 
   // anything you want to pass to the Elm module
-  flags: undefined,
+  flags = undefined;
 
   // function that is passed the Elm module's ports
   // eslint-disable-next-line
-  setup(ports) {},
+  setup(ports) {}
 
   didReceiveAttrs() {
     if (!this.src) throw new Error("elm-component missing src object");
-  },
+  }
 
   didInsertElement() {
     const { ports } = this.src.init({
@@ -25,4 +22,4 @@ export default Component.extend({
     });
     this.setup(ports);
   }
-});
+}
