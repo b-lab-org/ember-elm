@@ -43,7 +43,6 @@ init server =
 type Msg
     = Input String
     | Send
-    | NewEmoji String
     | NewMessage String
 
 
@@ -56,11 +55,8 @@ update msg ({ server, input, messages } as model) =
         Send ->
             ( { model | input = "" }, Cmd.none )
 
-        NewEmoji newEmoji ->
-            ( { model | input = input ++ newEmoji }, Cmd.none )
-
         NewMessage newMessage ->
-            ( { model | messages = newMessage :: messages }, Cmd.none )
+            ( { model | input = newMessage, messages = newMessage :: messages }, Cmd.none )
 
 
 
@@ -69,12 +65,12 @@ update msg ({ server, input, messages } as model) =
 --
 
 
-port emoji : (String -> msg) -> Sub msg
+port emberMessage : (String -> msg) -> Sub msg
 
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    emoji NewEmoji
+    emberMessage NewMessage
 
 
 --

@@ -7,7 +7,6 @@
     "elm",
     "ember",
     "ember-elm",
-    "emoji",
     "ember-cli"
   ],
   "repository": "https://github.com/nucleartide/ember-elm",
@@ -33,7 +32,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
-    "@ember/jquery": "^2.0.0",
     "@ember/optional-features": "^2.0.0",
     "babel-eslint": "^9.0.0",
     "broccoli-asset-rev": "^3.0.0",
@@ -61,7 +59,6 @@
     "eslint": "^8.26.0",
     "eslint-plugin-ember": "~6.2.0",
     "eslint-plugin-node": "^11.0.0",
-    "jquery-emoji-picker": "^0.2.0",
     "loader.js": "^4.7.0",
     "qunit-dom": "^2.0.0"
   },

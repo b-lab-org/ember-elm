@@ -13,7 +13,7 @@ export default class ElmComponent extends Component {
 
   didReceiveAttrs() {
     this._super(...arguments);
-    
+
     if (!this.src) throw new Error("elm-component missing src object");
   }
 
@@ -24,6 +24,7 @@ export default class ElmComponent extends Component {
       node: this.element,
       flags: this.flags
     });
+
     this.setup(ports);
   }
 }
