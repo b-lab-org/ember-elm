@@ -1,5 +1,7 @@
 import Component from '@ember/component';
+import classic from 'ember-classic-decorator';
 
+@classic
 export default class ElmComponent extends Component {
   // Elm module
   src = undefined;
@@ -8,19 +10,18 @@ export default class ElmComponent extends Component {
   flags = undefined;
 
   // function that is passed the Elm module's ports
-  // eslint-disable-next-line
-  setup(ports) {}
+  setup() {}
 
   didReceiveAttrs() {
-    this._super(...arguments);
+    super.didReceiveAttrs(...arguments);
 
     if (!this.src) {
-      throw new Error("elm-component missing src object");
+      throw new Error('elm-component missing src object');
     }
   }
 
   didInsertElement() {
-    this._super(...arguments);
+    super.didInsertElement(...arguments);
 
     const { ports } = this.src.init({
       node: this.element,

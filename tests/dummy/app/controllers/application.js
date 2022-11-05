@@ -5,13 +5,11 @@ import Elm from "dummy/elm-modules";
 
 export default class ApplicationController extends Controller {
     @tracked
-    sendToElm() {}
-
-    @tracked
     value = '👋';
 
     Elm = Elm;
     flags = '{}';
+    sendToElm() {}
 
     @action
     setupPorts(ports) {
