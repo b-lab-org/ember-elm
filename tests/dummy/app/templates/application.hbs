@@ -5,7 +5,7 @@
     {{emoji-picker value=value onChange=(action (mut value))}}
 
     <h2>This is a button. <small>(Try clicking it!)</small></h2>
-    <button id="talk-to-elm" onclick={{route-action "talk to elm"}}>
+    <button id="talk-to-elm" type="button" onclick={{route-action "talk to elm"}}>
       Send emojis to Elm
     </button>
 
