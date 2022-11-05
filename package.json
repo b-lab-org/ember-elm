@@ -35,7 +35,7 @@
     "@babel/core": "^7.20.2",
     "@ember/jquery": "^2.0.0",
     "@ember/optional-features": "^2.0.0",
-    "babel-eslint": "^8.0.0",
+    "babel-eslint": "^9.0.0",
     "broccoli-asset-rev": "^3.0.0",
     "elm": "^0.19.1-5",
     "ember-ajax": "^5.1.2",
