@@ -41,9 +41,9 @@ init server =
 
 
 type Msg
-    = Input String
-    | Send
-    | NewMessage String
+    = Input String    
+    | SendMessage
+    | RecieveMessage String
 
 
 update : Msg -> Model -> ( Model, Cmd msg )
@@ -52,12 +52,19 @@ update msg ({ server, input, messages } as model) =
         Input newInput ->
             ( { model | input = newInput }, Cmd.none )
 
-        Send ->
-            ( { model | input = "" }, Cmd.none )
+        SendMessage ->
+            ( { model | input = "" }, elmMessage model.input )
 
-        NewMessage newMessage ->
-            ( { model | input = newMessage, messages = newMessage :: messages }, Cmd.none )
+        RecieveMessage newMessage ->
+            ( { model | messages = newMessage :: messages }, Cmd.none )
 
+
+--
+-- Ports.
+--
+
+
+port elmMessage : String -> Cmd msg
 
 
 --
@@ -70,7 +77,7 @@ port emberMessage : (String -> msg) -> Sub msg
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    emberMessage NewMessage
+    emberMessage RecieveMessage
 
 
 --
@@ -82,7 +89,7 @@ view : Model -> Html Msg
 view model =
     div [ class "chat-container" ]
         [ input [ class "chat-message-input", onInput Input, value model.input ] []
-        , button [ onClick Send ] [ text Hello.Label.text ]
+        , button [ onClick SendMessage ] [ text Hello.Label.text ]
         , div [ class "chat-messages" ] (List.map viewMessage (List.reverse model.messages))
         ]
 

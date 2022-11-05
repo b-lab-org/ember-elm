@@ -9,6 +9,12 @@
       {{on "change" this.onChange}}
     />
 
+    <ul>
+      {{#each this.messages as |message|}}
+        <li>{{message}}</li>
+      {{/each}}
+    </ul>
+
     <h2>This is a button. <small>(Try clicking it!)</small></h2>
     <button id="talk-to-elm" type="button" {{on "click" this.postElmMessage}}>
       Send text to Elm
