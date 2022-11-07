@@ -1,28 +1,18 @@
-import Component from '@ember/component';
-import hbs from "htmlbars-inline-precompile";
+import { action } from '@ember/object';
+import Component from '@glimmer/component';
 
-export default Component.extend({
-  layout: hbs`{{yield}}`,
+export default class ElmComponent extends Component {
+  @action
+  insertedElement(element) {    
+    if (!this.args.src) {
+      throw new Error('elm-component missing src object');
+    }
 
-  // Elm module
-  src: undefined,
-
-  // anything you want to pass to the Elm module
-  flags: undefined,
-
-  // function that is passed the Elm module's ports
-  // eslint-disable-next-line
-  setup(ports) {},
-
-  didReceiveAttrs() {
-    if (!this.src) throw new Error("elm-component missing src object");
-  },
-
-  didInsertElement() {
-    const { ports } = this.src.init({
-      node: this.element,
-      flags: this.flags
+    const { ports } = this.args.src.init({
+      node: element,
+      flags: this.args.flags
     });
-    this.setup(ports);
+
+    this.args.setup(ports);
   }
-});
+}

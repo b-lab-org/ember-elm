@@ -25,21 +25,20 @@ while having access to the full power of ember-cli's addon ecosystem.
 
 Before you can install ember-elm, you need to have two things installed:
 
-1. **Node 6.0.0+ or up**. This is because this addon's [build code](index.js) uses
-   ES6.
+1. **Node 14+ or up**.
 2. [**Elm**](https://guide.elm-lang.org/install.html). Don't worry, it's relatively
    pain-free! This will be automated in the future.
 
 ### Install
 
 ```
-$ ember install ember-elm
+ember install ember-elm
 ```
 
 Alternatively, if you're using Yarn:
 
 ```
-$ yarn add ember-elm --dev && ember g ember-elm
+yarn add ember-elm --dev && ember g ember-elm
 ```
 
 ## Use
@@ -51,7 +50,7 @@ To get started, let's get a simple "Hello World" example up and running.
 First, generate an Elm module:
 
 ```
-$ ember g elm-module hello
+ember g elm-module hello
 ```
 
 This will generate an Elm file in your project, located at
@@ -159,8 +158,8 @@ export default Ember.Controller.extend({
 
 ### main
 
-`ember-elm` requires your elm files w/ `main` values to be defined in a separate directory 
-than the rest of your elm code.  By default this is set to `/elm-modules/Main/`, which will match everything 
+`ember-elm` requires your elm files w/ `main` values to be defined in a separate directory
+than the rest of your elm code.  By default this is set to `/elm-modules/Main/`, which will match everything
 in `<your app>/elm-module/Main/`.  Those files can then be used to import other elm files living outside of `/elm-modules/Main/`.
 
 To specify a different location, override `mainDirs` in `ember-cli-build.js` like:
@@ -177,7 +176,7 @@ ember-elm (via [node-elm-compiler][4]) will install Elm dependencies to
 `elm-stuff/`.  To avoid committing Elm deps to version control, run:
 
 ```
-$ echo elm-stuff/ >> .gitignore
+echo elm-stuff/ >> .gitignore
 ```
 
 ### Babel
@@ -209,7 +208,6 @@ module.exports = function(defaults) {
 > Twitter [@nucleartide](https://twitter.com/nucleartide) &nbsp;&middot;&nbsp;
 > Slack [@nucleartide](https://embercommunity.slack.com/messages/@nucleartide/)
 
-[1]: https://github.com/nucleartide/ember-elm/blob/7072c421333c072685b04f7a40d5d580d2cc2e92/tests/dummy/app/routes/application.js#L20
 [2]: https://guide.elm-lang.org/interop/javascript.html#ports
 [3]: https://guide.elm-lang.org/interop/javascript.html#flags
 [4]: https://github.com/rtfeldman/node-elm-compiler

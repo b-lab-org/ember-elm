@@ -1,11 +1,19 @@
 module.exports = {
   root: true,
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 2017,
-    sourceType: 'module'
+    sourceType: 'module',
+    requireConfigFile: false,
+    babelOptions: {
+      plugins: [
+        ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
+      ],
+    },
   },
   plugins: [
-    'ember'
+    'ember',
+    '@babel'
   ],
   extends: [
     'eslint:recommended',
@@ -15,6 +23,9 @@ module.exports = {
     browser: true
   },
   rules: {
+    // Octane rules we are not ready for
+    'ember/no-classic-components': 'off',
+    'ember/no-component-lifecycle-hooks': 'off',
   },
   overrides: [
     // node files
@@ -26,7 +37,8 @@ module.exports = {
         'testem.js',
         'blueprints/*/index.js',
         'config/**/*.js',
-        'tests/dummy/config/**/*.js'
+        'tests/dummy/config/**/*.js',
+        '.eslintrc.js'
       ],
       excludedFiles: [
         'addon/**',

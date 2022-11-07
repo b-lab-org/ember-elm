@@ -1,15 +1,30 @@
 
 <div id="chat">
-  <div class="emoji-chat">
+  <div class="text-chat">
     <h2>This is an Ember component.</h2>
-    {{emoji-picker value=value onChange=(action (mut value))}}
+    <Input 
+      aria-label="ember text box"
+      @type="text" 
+      @value={{this.value}} 
+      {{on "change" this.onChange}}
+    />
+
+    <ul>
+      {{#each this.messages as |message|}}
+        <li>{{message}}</li>
+      {{/each}}
+    </ul>
 
     <h2>This is a button. <small>(Try clicking it!)</small></h2>
-    <button id="talk-to-elm" onclick={{route-action "talk to elm"}}>
-      Send emojis to Elm
+    <button id="talk-to-elm" type="button" {{on "click" this.postElmMessage}}>
+      Send text to Elm
     </button>
 
     <h2>This is an Elm component.</h2>
-    {{elm-component src=Elm.Main.Chat flags=flags setup=(route-action "setup ports")}}
+    <ElmComponent 
+      @src={{this.Elm.Main.Chat}} 
+      @flags={{this.flags}} 
+      @setup={{this.setupPorts}} 
+    />
   </div>
 </div>

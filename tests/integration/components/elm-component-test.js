@@ -1,9 +1,9 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from "ember-qunit";
+import { next } from "@ember/runloop";
 import { render } from '@ember/test-helpers';
-import hbs from "htmlbars-inline-precompile";
 import Elm from "dummy/elm-modules";
-import { run } from "@ember/runloop";
+import { hbs } from "ember-cli-htmlbars";
+import { setupRenderingTest } from "ember-qunit";
+import { module, test } from 'qunit';
 
 module("Integration | Component | elm component", function(hooks) {
   setupRenderingTest(hooks);
@@ -11,9 +11,15 @@ module("Integration | Component | elm component", function(hooks) {
   test("it works", async function(assert) {
     const done = assert.async();
     this.set("Elm", Elm);
-    await render(hbs`{{elm-component src=Elm.Main.Hello}}`);
+    this.set("flags", "{}");
+    this.set("setup", () => {});
+    await render(hbs`
+      <div>
+        {{elm-component src=this.Elm.Main.Hello flags=this.flags setup=this.setup}}
+      </div>
+    `);
 
-    run.next(() => {
+    next(() => {
       assert.dom(this.element).hasText("hello world");
       done();
     });
