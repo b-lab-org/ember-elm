@@ -15,7 +15,11 @@ module("Integration | Component | elm component", function(hooks) {
     this.set("setup", () => {});
     await render(hbs`
       <div>
-        {{elm-component src=this.Elm.Main.Hello flags=this.flags setup=this.setup}}
+        <ElmComponent
+          @src={{this.Elm.Main.Hello}}
+          @flags={{this.flags}}
+          @setup={{this.setup}}
+        />
       </div>
     `);
 
