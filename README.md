@@ -25,7 +25,7 @@ while having access to the full power of ember-cli's addon ecosystem.
 
 Before you can install ember-elm, you need to have two things installed:
 
-1. **Node 14+ or up**.
+1. **Node 16+ or up**.
 2. [**Elm**](https://guide.elm-lang.org/install.html). Don't worry, it's relatively
    pain-free! This will be automated in the future.
 
