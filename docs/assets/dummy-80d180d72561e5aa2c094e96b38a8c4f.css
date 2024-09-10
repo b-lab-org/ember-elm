@@ -1,0 +1,101 @@
+/**
+ * Element styling.
+ */
+
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h2 {
+  color: white;
+  font-weight: 100;
+}
+
+h2:not(:first-child) {
+  margin-top: 60px;
+}
+
+/**
+ * "Talk to Elm" button.
+ */
+
+button#talk-to-elm {
+  border: 0;
+  background: #d9534f;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #b54541;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all .1s linear;
+}
+
+button#talk-to-elm:active {
+  box-shadow: 0 2px 0 #b54541;
+  transform: translateY(3px);
+}
+
+/**
+ * Copied from react-elm-components.
+ */
+
+body {
+  margin: 0;
+  background-color: #5A6378;
+}
+
+#chat {
+  margin: auto;
+  padding: 60px;
+}
+
+.text-chat {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.chat-container {
+  background-color: rgb(245, 247, 249);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.1), 0 2px 15px rgba(0,0,0,0.1);
+  font-size: 24px;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.chat-container button {
+  background-color: rgb(49, 70, 91);
+  color: white;
+  padding: 10px;
+  border: 0;
+  font-family: monospace;
+  margin-left: 20px;
+}
+
+.chat-container button:hover {
+  background-color: black;
+}
+
+.chat-message-input {
+  font-size: inherit;
+  font-family: inherit;
+  width: 165px;
+  vertical-align: bottom;
+  border: 1px solid lightgray;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.chat-messages {
+  font-size: inherit;
+  background-color: white;
+  margin-top: 20px;
+  border-top: 1px solid lightgray;
+  min-height: 1em;
+}
+
+.chat-messages > div {
+  padding: 5px 10px;
+  border-bottom: 1px solid lightgray;
+}
