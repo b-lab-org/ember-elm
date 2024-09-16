@@ -7880,9 +7880,9 @@ qunit-dom@^2.0.0:
     ember-cli-version-checker "^5.1.1"
 
 qunit@^2.19.3:
-  version "2.19.4"
-  resolved "https://registry.npmjs.org/qunit/-/qunit-2.19.4.tgz"
-  integrity sha512-aqUzzUeCqlleWYKlpgfdHHw9C6KxkB9H3wNfiBg5yHqQMzy0xw/pbCRHYFkjl8MsP/t8qkTQE+JTYL71azgiew==
+  version "2.22.0"
+  resolved "https://registry.yarnpkg.com/qunit/-/qunit-2.22.0.tgz#77c26ebfc337bbf82e0e69d4192f0e4454ef134d"
+  integrity sha512-wPYvAvpjTL3zlUeyCX75T8gfZfdVXZa8y1EVkGe/XZNORIsCH/WI2X8R2KlemT921X9EKSZUL6CLGSPC7Ks08g==
   dependencies:
     commander "7.2.0"
     node-watch "0.7.3"
