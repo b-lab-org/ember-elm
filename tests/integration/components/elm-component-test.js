@@ -1,4 +1,3 @@
-import { next } from "@ember/runloop";
 import { render } from '@ember/test-helpers';
 import Elm from "dummy/elm-modules";
 import { hbs } from "ember-cli-htmlbars";
@@ -23,9 +22,7 @@ module("Integration | Component | elm component", function(hooks) {
       </div>
     `);
 
-    next(() => {
-      assert.dom(this.element).hasText("hello world");
-      done();
-    });
+    assert.dom(this.element).hasText("hello world");
+    done();
   });
 });
