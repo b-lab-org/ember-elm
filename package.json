@@ -23,7 +23,7 @@
   "dependencies": {
     "broccoli-caching-writer": "^3.0.3",
     "broccoli-merge-trees": "^4.2.0",
-    "chalk": "^4.0.0",
+    "chalk": "^5.4.1",
     "ember-auto-import": "^2.4.3",
     "ember-classic-decorator": "^3.0.1",
     "ember-cli-babel": "^8.2.0",
