@@ -1,7 +1,7 @@
 const CachingWriter = require("broccoli-caching-writer");
 const { compileToString } = require("node-elm-compiler");
 const fs = require("fs");
-const chalk = require("chalk");
+const pc = require("picocolors");
 const mkdirp = require("mkdirp");
 const path = require("path");
 
@@ -111,7 +111,7 @@ ${tidyMessage}
 }
 
 function makeRed(match) {
-  return chalk.red(match);
+  return pc.red(match);
 }
 
 function pathFix(match, errType, connector, tempPath) {
@@ -121,5 +121,5 @@ function pathFix(match, errType, connector, tempPath) {
     .slice(3)
     .join(path.sep);
 
-  return `-- ${chalk.red(errType)}${connector}${chalk.yellow(cleanPath)}`;
+  return `-- ${pc.red(errType)}${connector}${pc.yellow(cleanPath)}`;
 }
