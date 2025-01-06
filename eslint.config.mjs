@@ -55,10 +55,7 @@ export default [{
         },
     },
 
-    rules: {
-        "ember/no-classic-components": "off",
-        "ember/no-component-lifecycle-hooks": "off",
-    },
+    rules: {},
 }, {
     files: [
         "**/.template-lintrc.js",

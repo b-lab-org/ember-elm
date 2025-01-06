@@ -1041,7 +1041,7 @@
     debug "^4.3.1"
     globals "^11.1.0"
 
-"@babel/types@^7.24.7", "@babel/types@^7.25.0", "@babel/types@^7.25.7", "@babel/types@^7.25.9", "@babel/types@^7.26.0", "@babel/types@^7.4.4", "@babel/types@^7.7.2":
+"@babel/types@^7.24.7", "@babel/types@^7.25.0", "@babel/types@^7.25.7", "@babel/types@^7.25.9", "@babel/types@^7.26.0", "@babel/types@^7.4.4":
   version "7.26.0"
   resolved "https://registry.npmjs.org/@babel/types/-/types-7.26.0.tgz"
   integrity sha512-Z/yiTPj+lDVnF7lWeKCIJzaIkI0vYO87dMpZ4bg4TDrFe4XXLFWL1TbXU27gBP3QccxV9mZICCrnjnYlJjXHOA==
@@ -1686,19 +1686,19 @@
 
 "@pnpm/constants@10.0.0":
   version "10.0.0"
-  resolved "https://registry.yarnpkg.com/@pnpm/constants/-/constants-10.0.0.tgz#a7b42d96965d6a995af80aa3b07997636e4a3999"
+  resolved "https://registry.npmjs.org/@pnpm/constants/-/constants-10.0.0.tgz"
   integrity sha512-dxIXcW1F1dxIGfye2JXE7Q8WVwYB0axVzdBOkvE1WKIVR4xjB8e6k/Dkjo7DpbyfW5Vu2k21p6dyM32YLSAWoQ==
 
 "@pnpm/error@6.0.3":
   version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@pnpm/error/-/error-6.0.3.tgz#318282ce77d097864370bca6f9b987dff5a5fb84"
+  resolved "https://registry.npmjs.org/@pnpm/error/-/error-6.0.3.tgz"
   integrity sha512-OIYhG7HQh4zUFh2s8/6bp7glVRjNxms7bpzXVOLV7pyRa+rSYFmqJ8zDsBC64k58nuaxS85Ip+SCDjFxsFGeOg==
   dependencies:
     "@pnpm/constants" "10.0.0"
 
 "@pnpm/find-workspace-dir@^7.0.2":
   version "7.0.3"
-  resolved "https://registry.yarnpkg.com/@pnpm/find-workspace-dir/-/find-workspace-dir-7.0.3.tgz#0c7fe41397ed453f40f1a71604331b434342d4c2"
+  resolved "https://registry.npmjs.org/@pnpm/find-workspace-dir/-/find-workspace-dir-7.0.3.tgz"
   integrity sha512-eGjkyHSufkHyZ66WpygWnslcRePB0U1lJg1dF3rgWqTChpregYoDyNGDzK7l9Gk+CHVgGZZS5aWp7uKKVmAAEg==
   dependencies:
     "@pnpm/error" "6.0.3"
@@ -2431,14 +2431,6 @@ babel-plugin-ember-template-compilation@^2.0.0, babel-plugin-ember-template-comp
     "@glimmer/syntax" "^0.84.3"
     babel-import-util "^3.0.0"
 
-babel-plugin-filter-imports@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/babel-plugin-filter-imports/-/babel-plugin-filter-imports-4.0.0.tgz"
-  integrity sha512-jDLlxI8QnfKd7PtieH6pl4tZJzymzfCDCPGdTq/grgbiYAikwDPp/oL0IlFJn0HQjLpcLkyYhPKkUVneRESw5w==
-  dependencies:
-    "@babel/types" "^7.7.2"
-    lodash "^4.17.15"
-
 babel-plugin-htmlbars-inline-precompile@^5.2.1, babel-plugin-htmlbars-inline-precompile@^5.3.0:
   version "5.3.1"
   resolved "https://registry.npmjs.org/babel-plugin-htmlbars-inline-precompile/-/babel-plugin-htmlbars-inline-precompile-5.3.1.tgz"
@@ -2503,7 +2495,7 @@ babel-plugin-syntax-dynamic-import@^6.18.0:
 
 babel-remove-types@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/babel-remove-types/-/babel-remove-types-1.0.0.tgz#21d443909dc9b00fed359f6074060f3c147b3db8"
+  resolved "https://registry.npmjs.org/babel-remove-types/-/babel-remove-types-1.0.0.tgz"
   integrity sha512-Kg+NZLwfe1E+LoGrkX9I9nFDM1FVBoiIdyW4bjNGGvrqWhvgcdauqijOFn5/WYkdoGXpUEDRWvU4X100ghVx4A==
   dependencies:
     "@babel/core" "^7.16.10"
@@ -3278,9 +3270,9 @@ chrome-trace-event@^1.0.2:
   integrity sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==
 
 ci-info@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/ci-info/-/ci-info-4.0.0.tgz"
-  integrity sha512-TdHqgGf9odd8SXNuxtUBVx8Nv+qZOejE6qyqiy5NtbYYQOeFa6zmHkxlPzmaLxWWHsU6nJmB7AETdVPi+2NBUg==
+  version "4.1.0"
+  resolved "https://registry.npmjs.org/ci-info/-/ci-info-4.1.0.tgz"
+  integrity sha512-HutrvTNsF48wnxkzERIXOe5/mlcfFcbfCmwcg6CJnizbSue78AbDt+1cgl26zwn61WFxhcPykPfZrbqjGmBb4A==
 
 class-utils@^0.3.5:
   version "0.3.6"
@@ -3968,16 +3960,6 @@ ember-auto-import@^2.10.0, ember-auto-import@^2.4.3:
     typescript-memoize "^1.0.0-alpha.3"
     walk-sync "^3.0.0"
 
-ember-classic-decorator@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.npmjs.org/ember-classic-decorator/-/ember-classic-decorator-3.0.1.tgz"
-  integrity sha512-IoocHPX1cY93Sma7VeDGbF0M1+TkBWDJLus+RD01902eD+KHEL2+diwM+iayCyO+1/xaUzdzNGh35J+i+TCxoA==
-  dependencies:
-    "@embroider/macros" "^1.0.0"
-    babel-plugin-filter-imports "^4.0.0"
-    ember-cli-babel "^7.26.11"
-    ember-cli-htmlbars "^6.0.1"
-
 ember-cli-app-version@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/ember-cli-app-version/-/ember-cli-app-version-7.0.0.tgz"
@@ -4076,7 +4058,7 @@ ember-cli-get-component-path-option@^1.0.0:
   resolved "https://registry.npmjs.org/ember-cli-get-component-path-option/-/ember-cli-get-component-path-option-1.0.0.tgz"
   integrity sha512-k47TDwcJ2zPideBCZE8sCiShSxQSpebY2BHcX2DdipMmBox5gsfyVrbKJWIHeSTTKyEUgmBIvQkqTOozEziCZA==
 
-ember-cli-htmlbars@^6.0.0, ember-cli-htmlbars@^6.0.1:
+ember-cli-htmlbars@^6.0.0:
   version "6.3.0"
   resolved "https://registry.npmjs.org/ember-cli-htmlbars/-/ember-cli-htmlbars-6.3.0.tgz"
   integrity sha512-N9Y80oZfcfWLsqickMfRd9YByVcTGyhYRnYQ2XVPVrp6jyUyOeRWmEAPh7ERSXpp8Ws4hr/JB9QVQrn/yZa+Ag==
@@ -4224,7 +4206,7 @@ ember-cli-version-checker@^5.1.1, ember-cli-version-checker@^5.1.2:
 
 ember-cli@^6.1.0:
   version "6.1.0"
-  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-6.1.0.tgz#549e3de86138f5813947b09ed1c7d76dcbbaa3f9"
+  resolved "https://registry.npmjs.org/ember-cli/-/ember-cli-6.1.0.tgz"
   integrity sha512-LpVtpf/QgHcmmzX3InToSUnn0wX9D8TEKVhxF4KPf2HpCzrTllUcwu+pfCsXDb3VziTjRKUnnh5ZnjER/pVyFQ==
   dependencies:
     "@pnpm/find-workspace-dir" "^7.0.2"
@@ -6051,7 +6033,7 @@ homedir-polyfill@^1.0.1:
 
 hosted-git-info@^8.0.0:
   version "8.0.2"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-8.0.2.tgz#5bd7d8b5395616e41cc0d6578381a32f669b14b2"
+  resolved "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-8.0.2.tgz"
   integrity sha512-sYKnA7eGln5ov8T8gnYlkSOxFJvywzEx9BueN6xo/GKO8PGiI6uK6xx+DIGe45T3bdVjLAQDQW1aicT8z8JwQg==
   dependencies:
     lru-cache "^10.0.1"
@@ -6922,7 +6904,7 @@ lodash.uniq@^4.2.0:
   resolved "https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz"
   integrity sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==
 
-lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21:
+lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -7434,7 +7416,7 @@ normalize-url@^4.1.0:
 
 npm-package-arg@^12.0.0:
   version "12.0.1"
-  resolved "https://registry.yarnpkg.com/npm-package-arg/-/npm-package-arg-12.0.1.tgz#eb05e797b2fbdf8acf7f1d15344e1e05904202d5"
+  resolved "https://registry.npmjs.org/npm-package-arg/-/npm-package-arg-12.0.1.tgz"
   integrity sha512-aDxjFfPV3Liw0WOBWlyZLMBqtbgbg03rmGvHDJa2Ttv7tIz+1oB5qWec4psCDFZcZi9b5XdGkPdQiJxOPzvQRQ==
   dependencies:
     hosted-git-info "^8.0.0"
@@ -7971,7 +7953,7 @@ private@^0.1.8:
 
 proc-log@^5.0.0:
   version "5.0.0"
-  resolved "https://registry.yarnpkg.com/proc-log/-/proc-log-5.0.0.tgz#e6c93cf37aef33f835c53485f314f50ea906a9d8"
+  resolved "https://registry.npmjs.org/proc-log/-/proc-log-5.0.0.tgz"
   integrity sha512-Azwzvl90HaF0aCz1JrDdXQykFakSSNPaPoiZ9fm5qJIMHioDZEi7OAdRwSm6rSoPtY3Qutnm3L7ogmg3dc+wbQ==
 
 promise-map-series@^0.2.1:
@@ -9169,7 +9151,7 @@ terser@^5.26.0, terser@^5.7.0:
 
 testem@^3.15.2:
   version "3.15.2"
-  resolved "https://registry.yarnpkg.com/testem/-/testem-3.15.2.tgz#abd6a96077a6576cd730f3d2e476039044c5cb34"
+  resolved "https://registry.npmjs.org/testem/-/testem-3.15.2.tgz"
   integrity sha512-mRzqZktqTCWi/rUP/RQOKXvMtuvY3lxuzBVb1xGXPnRNGMEj/1DaLGn6X447yOsz6SlWxSsZfcNuiE7fT1MOKg==
   dependencies:
     "@xmldom/xmldom" "^0.8.0"
@@ -9597,7 +9579,7 @@ v8-compile-cache@^2.3.0:
 
 validate-npm-package-name@^6.0.0:
   version "6.0.0"
-  resolved "https://registry.yarnpkg.com/validate-npm-package-name/-/validate-npm-package-name-6.0.0.tgz#3add966c853cfe36e0e8e6a762edd72ae6f1d6ac"
+  resolved "https://registry.npmjs.org/validate-npm-package-name/-/validate-npm-package-name-6.0.0.tgz"
   integrity sha512-d7KLgL1LD3U3fgnvWEY1cQXoO/q6EQ1BSz48Sa149V/5zVTAbgmZIpyI8TRi6U9/JNyeYLlTKsEMPtLC27RFUg==
 
 validate-peer-dependencies@^1.1.0:
